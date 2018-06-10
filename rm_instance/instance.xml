@@ -1,0 +1,2237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- # Main Scene File -->
+<scene version="0.5.0">
+	<integrator type="path" name="integrator">
+		<integer name="maxDepth" value="65"/>
+		<integer name="rrDepth" value="5"/>
+		<boolean name="hideEmitters" value="false"/>
+	</integrator>
+
+	<sensor type="perspective" id="Camera-camera">
+		<float name="farClip" value="100.000000"/>
+		<float name="fov" value="49.134343"/>
+		<sampler type="ldsampler" name="sampler">
+			<integer name="sampleCount" value="256"/>
+		</sampler>
+		<string name="fovAxis" value="y"/>
+		<film type="hdrfilm" name="film">
+			<boolean name="fitHorizontal" value="false"/>
+			<integer name="width" value="600"/>
+			<boolean name="highQualityEdges" value="false"/>
+			<integer name="height" value="600"/>
+			<boolean name="banner" value="false"/>
+			<string name="fileFormat" value="openexr"/>
+			<float name="shiftX" value="0.000000"/>
+			<float name="pixelAspectX" value="1.000000"/>
+			<boolean name="attachLog" value="true"/>
+			<float name="shiftY" value="0.000000"/>
+			<float name="pixelAspectY" value="1.000000"/>
+			<string name="componentFormat" value="float16"/>
+			<rfilter type="box"/>
+			<string name="pixelFormat" value="rgb"/>
+		</film>
+		<float name="nearClip" value="2.100000"/>
+		<transform name="toWorld">
+			<lookat up="0.000000, 1.000000, 0.000000" origin="0.000000, 1.000000, 3.150000" target="0.000000, 1.000000, 2.150000"/>
+		</transform>
+	</sensor>
+	<bsdf type="roughplastic" id="prop-bl_mat-bsdf">
+		<rgb value="0.250000 0.250000 0.250000" name="specularReflectance"/>
+		<rgb value="0.011735 0.011735 0.011735" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.367879"/>
+	</bsdf>
+	<shape type="shapegroup" id="Cube_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Cube_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="prop-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Cube_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<bsdf type="roughplastic" id="Material #49.002-bl_mat-bsdf">
+		<rgb value="1.000000 1.000000 1.000000" name="specularReflectance"/>
+		<rgb value="0.000000 0.000000 0.000000" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.375311"/>
+	</bsdf>
+	<bsdf type="roughplastic" id="base-bl_mat-bsdf">
+		<rgb value="0.250000 0.250000 0.250000" name="specularReflectance"/>
+		<rgb value="0.683972 0.355875 0.000000" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.367879"/>
+	</bsdf>
+	<shape type="shapegroup" id="Plane.019_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Plane.019_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Plane_019_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<bsdf type="roughplastic" id="internals_alu-bl_mat-bsdf">
+		<rgb value="0.250000 0.250000 0.250000" name="specularReflectance"/>
+		<rgb value="0.336015 0.336015 0.336015" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.367879"/>
+	</bsdf>
+	<shape type="shapegroup" id="Plane.020_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Plane.020_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Plane_020_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Sphere.001_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Sphere.001_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Sphere_001_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Cylinder.042_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Cylinder.042_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Cylinder_042_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Plane.015_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Plane.015_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Plane_015_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Plane.012_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Plane.012_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Plane_012_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Cylinder.026_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Cylinder.026_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Cylinder_026_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Cylinder.024_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Cylinder.024_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Cylinder_024_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Mesh.005_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Mesh.005_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Mesh_005_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Mesh.006_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Mesh.006_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Mesh_006_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Mesh.007_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Mesh.007_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Mesh_007_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Cylinder.031_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Cylinder.031_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Cylinder_031_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Plane.018_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Plane.018_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Plane_018_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Cylinder.032_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Cylinder.032_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Cylinder_032_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Cylinder_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Cylinder_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Cylinder_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Cylinder.002_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Cylinder.002_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Cylinder_002_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Cylinder.034_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Cylinder.034_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Cylinder_034_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Cylinder.033_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Cylinder.033_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Cylinder_033_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Cylinder.004_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Cylinder.004_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Cylinder_004_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Cylinder.037_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Cylinder.037_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Cylinder_037_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Plane.024_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Plane.024_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Plane_024_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Cylinder.007_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Cylinder.007_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Cylinder_007_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Plane.004_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Plane.004_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Plane_004_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Cylinder.010_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Cylinder.010_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Cylinder_010_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Cylinder.035_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Cylinder.035_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Cylinder_035_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<bsdf type="diffuse" id="glass-bl_mat-bsdf">
+		<rgb name="reflectance" value="0.250000 0.250000 0.250000" />
+	</bsdf>
+	<bsdf type="diffuse" id="mirror-bl_mat-bsdf">
+		<rgb name="reflectance" value="0.250000 0.250000 0.250000" />
+	</bsdf>
+	<shape type="shapegroup" id="Cylinder.036_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Cylinder.036_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="glass-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Cylinder_036_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Cube.017_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Cube.017_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Cube_017_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Cube.016_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Cube.016_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Cube_016_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Cylinder.021_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Cylinder.021_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Cylinder_021_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Cylinder.022_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Cylinder.022_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Cylinder_022_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Plane.021_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Plane.021_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Plane_021_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Cylinder.043_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Cylinder.043_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Cylinder_043_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="shapegroup" id="Plane.027_0000_m000_0.000000_shapegroup">
+		<shape type="serialized" name="shape" id="Plane.027_0000_m000_0.000000_shape">
+			<ref name="bsdf" id="base-bl_mat-bsdf"/>
+			<string name="filename" value="Scene/00481/Plane_027_0000_m000_0_000000.serialized"/>
+		</shape>
+	</shape>
+	<shape type="instance" id="aileron_R02_Cube.016_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077983 -0.329864 -0.071523 0.038509 0.142208 1.657224 -0.039483 -0.157308 0.022740 -0.203336 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cube.016_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="aileron_L02_Cube.016_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.622839 -0.071523 0.038510 0.142208 1.177163 -0.039483 -0.157308 0.022741 -0.468344 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cube.016_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<bsdf type="roughplastic" id="internals_b-bl_mat-bsdf">
+		<rgb value="0.250000 0.250000 0.250000" name="specularReflectance"/>
+		<rgb value="0.007214 0.007214 0.007214" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.367879"/>
+	</bsdf>
+	<shape type="serialized" id="engine09_Sphere_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.080749 0.012414 0.127400 -0.071523 0.134848 -0.059348 1.175719 -0.039483 0.046015 0.152136 0.032971 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_b-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Sphere_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wire_R01_Cylinder.055_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.007121 -0.024353 -0.161796 0.076167 0.158668 0.038510 -0.012779 1.593501 0.039945 -0.157308 0.021919 -0.860786 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_055_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="fuselage_lock01_Plane.019_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.147498 -0.014231 0.069740 0.176163 -0.070349 0.004741 -0.147818 1.180459 0.010826 -0.163085 -0.010383 -0.041124 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.019_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="aileron_controll_L03_Cylinder.016_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.096338 0.130778 0.020923 0.628011 -0.016759 -0.037702 0.158491 1.147528 0.131376 0.091090 0.035561 -0.303434 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_016_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="undercarriage_L01_Cube.026_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.157209 -0.024353 -0.038910 0.132921 0.043840 0.038510 0.153025 1.176972 -0.013605 -0.157308 0.043485 -0.168593 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_026_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="fuselage05_Mesh.013_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.024353 0.077984 0.141941 0.162100 0.038510 0.142208 -0.071523 1.240125 -0.157308 0.022741 -0.039483 0.041048 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Mesh_013_0000_m000_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="Material #198.002-bl_mat-bsdf">
+		<rgb value="0.750000 0.750000 0.750000" name="specularReflectance"/>
+		<rgb value="0.533333 0.326275 0.191373" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.375311"/>
+	</bsdf>
+	<shape type="serialized" id="interior_Untitled.043_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.372154 0.000000 -0.000000 0.005829 0.280433 0.005007 -0.002986 -0.000000 0.535977 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #198.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_043_0000_m000_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="Material #199.002-bl_mat-bsdf">
+		<rgb value="0.600000 0.600000 0.600000" name="specularReflectance"/>
+		<rgb value="0.000000 0.000000 0.000000" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.375311"/>
+	</bsdf>
+	<shape type="serialized" id="interior_Untitled.043_0000_m001_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.372154 0.000000 -0.000000 0.005829 0.280433 0.005007 -0.002986 -0.000000 0.535977 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #199.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_043_0000_m001_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="Material #36.002-bl_mat-bsdf">
+		<rgb value="0.956863 0.956863 0.956863" name="specularReflectance"/>
+		<rgb value="0.800000 0.800000 0.800000" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.375311"/>
+	</bsdf>
+	<shape type="serialized" id="interior_Untitled.043_0000_m002_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.372154 0.000000 -0.000000 0.005829 0.280433 0.005007 -0.002986 -0.000000 0.535977 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #36.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_043_0000_m002_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="Material #200.002-bl_mat-bsdf">
+		<rgb value="0.600000 0.600000 0.600000" name="specularReflectance"/>
+		<rgb value="0.050196 0.050196 0.080576" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.375311"/>
+	</bsdf>
+	<shape type="serialized" id="interior_Untitled.043_0000_m003_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.372154 0.000000 -0.000000 0.005829 0.280433 0.005007 -0.002986 -0.000000 0.535977 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #200.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_043_0000_m003_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wire_L01_Cylinder.030_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.140381 0.024353 0.080757 0.095909 0.084342 -0.038510 -0.135000 1.583553 -0.001085 0.157308 -0.045551 -0.866278 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_030_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="prop_tip01_Cylinder.001_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.045225 0.155510 0.024352 0.170849 -0.151131 0.049982 -0.038510 1.216273 -0.043999 -0.011838 0.157308 0.115708 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_001_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="rudder13_Plane.015_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.161796 -0.024352 0.007121 0.082806 -0.012779 0.038510 -0.158668 1.593313 0.021919 -0.157308 -0.039945 -0.861860 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.015_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="prop_tip02_Cylinder.044_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.077984 0.024353 0.165535 -0.071523 0.142208 -0.038510 1.224677 -0.039483 0.022741 0.157308 0.081381 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_044_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="wing_light_R01_Cylinder.035_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.077984 0.024353 -0.543106 -0.071523 0.142208 -0.038510 1.755951 -0.039483 0.022741 0.157308 0.053633 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.035_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="flap_L01_Cube.012_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.378541 -0.071523 0.038510 0.142208 1.299651 -0.039483 -0.157308 0.022741 -0.398696 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_012_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="rudder_frame05_Cylinder.024_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.143949 0.077923 -0.005336 0.019591 -0.076187 0.137620 -0.045586 1.477789 -0.017206 0.042550 0.157211 -0.901797 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.024_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="wing_support_L07_Plane.004_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.620198 -0.071523 0.038510 0.142208 1.173486 -0.039483 -0.157308 0.022741 -0.411494 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.004_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="front_bumper_Untitled.038_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.453391 0.000000 -0.000000 0.005829 0.206142 0.005007 -0.002986 -0.000000 0.850451 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #36.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_038_0000_m000_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="Material #37.002-bl_mat-bsdf">
+		<rgb value="0.600000 0.600000 0.600000" name="specularReflectance"/>
+		<rgb value="0.050196 0.050196 0.080576" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.375311"/>
+	</bsdf>
+	<shape type="serialized" id="front_bumper_Untitled.038_0000_m004_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.453391 0.000000 -0.000000 0.005829 0.206142 0.005007 -0.002986 -0.000000 0.850451 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #37.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_038_0000_m004_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="prop02_Cube_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.045225 -0.024353 0.155510 0.166078 -0.151131 0.038510 0.049982 1.223818 -0.043999 -0.157308 -0.011838 0.084889 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cube_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="interior_panel_Plane.009_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.160790 -0.071523 0.038510 0.142208 1.297390 -0.039483 -0.157308 0.022741 -0.067399 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_b-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Plane_009_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="rudder_spring_R_Mesh.007_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.140141 -0.055919 -0.061975 0.009391 0.069887 -0.013355 -0.146418 1.478311 0.044391 -0.155510 0.034859 -0.904088 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Mesh.007_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="wing_support_L06_Plane.004_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.638139 -0.071523 0.038510 0.142208 1.145115 -0.039483 -0.157308 0.022741 -0.295604 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.004_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="wing_support_R09_Cylinder.048_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.123071 -0.040646 0.100115 0.018520 -0.108052 0.046496 -0.113951 1.257915 -0.000142 -0.151683 -0.061757 -0.221850 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_048_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="engine05_Cylinder.040_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.077984 -0.024353 0.141941 0.160862 -0.142208 0.038510 -0.071523 1.232067 -0.022741 -0.157308 -0.039483 0.051191 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_b-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_040_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="undercarriage_L05_Cylinder.004_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.026145 -0.024353 0.159828 0.125595 -0.156055 0.038510 0.031395 1.179491 -0.042251 -0.157308 -0.017057 -0.166949 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.004_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="fuselage_lock01_002_Plane.019_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.025368 0.054615 -0.152300 0.075530 -0.157453 -0.027149 -0.035961 1.231167 -0.037239 0.151993 0.048302 -0.013132 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.019_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="pin02-2_002_Cylinder.042_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.125731 -0.090287 -0.053495 0.103764 -0.101949 0.124887 0.028836 1.208243 0.024896 0.055438 -0.152081 0.041650 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.042_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="wire_L02_Cylinder.053_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.024063 -0.024353 0.160155 0.041031 -0.158171 0.038510 -0.017909 1.464371 -0.034996 -0.157308 -0.029178 -0.886959 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_053_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wing_support_R04_Cube.031_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.048768 -0.065546 -0.130000 -0.071523 0.010676 -0.146943 1.447640 -0.039483 0.155979 0.030550 -0.191935 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_031_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="pin08_Cylinder.008_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.160596 0.020923 -0.024352 0.616727 0.014809 0.158491 0.038510 1.173276 0.028487 0.035561 -0.157308 -0.411549 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_008_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="undercarriage01_Cylinder_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.077984 0.024353 0.069589 -0.071523 0.142208 -0.038510 1.167084 -0.039483 0.022741 0.157308 -0.159216 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="engine02_Cylinder.038_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.077984 0.024353 0.164136 -0.071523 0.142208 -0.038510 1.226889 -0.039483 0.022741 0.157308 0.072345 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_038_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="engine06_Cylinder.039_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.077984 -0.024353 0.141941 0.160862 -0.142208 0.038510 -0.071523 1.232067 -0.022741 -0.157308 -0.039483 0.051191 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_039_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wing_support_L04_Cube.011_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.048767 0.065546 0.368553 -0.071523 -0.010675 0.146943 1.196422 -0.039483 -0.155979 -0.030550 -0.330615 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_011_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wing_light_L03_Cylinder.051_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.077984 0.024353 0.913207 -0.071523 0.142208 -0.038510 1.020887 -0.039483 0.022741 0.157308 -0.343729 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="mirror-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_051_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="fuselage09_Plane.008_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.177902 -0.071523 0.038510 0.142208 1.416228 -0.039483 -0.157308 0.022741 -0.221155 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Plane_008_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="pin01_003_Cylinder.043_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.077984 -0.024353 0.141941 -0.085310 -0.142208 0.038510 -0.071523 1.533382 -0.022741 -0.157308 -0.039483 -0.269669 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.043_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="fuselage04_Mesh.011_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.024353 0.077984 0.141941 0.162100 0.038510 0.142208 -0.071523 1.240125 -0.157308 0.022741 -0.039483 0.041048 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Mesh_011_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="pin02-1_003_Sphere.001_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.056492 0.054615 -0.143693 0.079601 -0.146529 -0.027149 -0.067926 1.217977 -0.046472 0.151993 0.039499 -0.016951 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Sphere.001_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="wheel_R03_Cylinder.033_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.077984 -0.024353 0.141941 -0.056311 -0.142208 0.038510 -0.071523 1.189192 -0.022741 -0.157308 -0.039483 -0.136808 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.033_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="fuselage_lock01_001_Plane.019_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.158357 -0.014564 0.039150 0.181718 -0.039848 0.006626 -0.158714 1.177862 0.012530 -0.162990 -0.009950 0.022720 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.019_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="wing_support_R07_Plane.024_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.024353 -0.077984 -0.307564 -0.071523 -0.038510 -0.142208 1.640981 -0.039484 0.157307 -0.022741 -0.153421 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.024_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="aileron_R03_Cube.013_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.041096 -0.070609 -0.321244 -0.071523 -0.005898 -0.147212 1.673396 -0.039483 0.158424 0.012835 -0.201637 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_013_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="engine08_Cube.022_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.159459 -0.071523 0.038510 0.142208 1.232774 -0.039483 -0.157308 0.022741 0.051582 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_b-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_022_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="fuselage12_Cylinder.057_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.041213 -0.071523 0.038510 0.142208 1.223082 -0.039483 -0.157308 0.022741 -0.143241 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_057_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="fuselage10_Mesh.014_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.024353 0.077984 0.141941 0.162118 0.038510 0.142208 -0.071523 1.240156 -0.157308 0.022741 -0.039483 0.041053 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Mesh_014_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="pin03_001_Cylinder.056_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.161796 -0.024353 0.007121 0.084565 -0.012779 0.038510 -0.158668 1.594147 0.021919 -0.157308 -0.039945 -0.861928 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_056_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="windshield02_Mesh.001_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.024353 0.077984 0.141941 0.162100 0.038510 0.142208 -0.071523 1.240125 -0.157308 0.022741 -0.039483 0.041048 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="glass-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Mesh_001_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="interior_frame02_Cylinder.059_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.004770 0.145481 0.075061 0.226532 0.136019 -0.038264 0.082804 1.370467 0.091093 0.064752 -0.119712 -0.172145 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_b-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_059_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="pin01_Cylinder.043_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.077984 -0.024353 0.141941 0.378541 -0.142208 0.038510 -0.071523 1.299651 -0.022741 -0.157308 -0.039483 -0.398696 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.043_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="wing_support_R01_Cube.007_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.104938 0.004351 -0.125662 0.025862 -0.123350 -0.028176 -0.103983 1.249688 -0.024382 0.161273 -0.014776 -0.228533 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_007_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="rudder01_Mesh.002_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.024353 0.077984 0.141941 0.018391 0.038510 0.142208 -0.071523 1.477007 -0.157308 0.022741 -0.039483 -0.904697 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Mesh_002_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="pin02-2_Cylinder.042_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.005278 0.163039 0.014564 0.167501 -0.163572 -0.004703 -0.006626 1.176283 -0.006178 -0.014760 0.162990 0.023926 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.042_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="rudder_wire_R_Mesh.020_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.009218 0.079372 -0.142957 0.014687 -0.049585 0.137799 0.073311 1.494021 0.155814 0.039156 0.031787 -0.907821 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Mesh_020_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="wheel_L03_Cylinder.033_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.077984 -0.024353 0.141941 0.163688 -0.142208 0.038510 -0.071523 1.078335 -0.022741 -0.157308 -0.039483 -0.198005 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.033_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="aileron_controll_L05_Cylinder.015_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.096338 0.130778 0.020923 0.619148 -0.016759 -0.037702 0.158491 1.150083 0.131376 0.091090 0.035561 -0.309608 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_015_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="pin08_001_Cylinder.049_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.103783 -0.124329 0.024353 -0.306003 0.118410 -0.106385 -0.038510 1.638235 0.045055 -0.006796 0.157307 -0.154876 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_049_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="undercarriage_R01_Cube.004_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.051466 0.024353 0.153558 0.041344 0.148990 -0.038510 0.056042 1.223117 0.044441 0.157308 -0.010053 -0.143119 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_004_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wing_support_L03_Cube.010_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.002935 0.081645 0.377661 -0.071523 0.074634 0.127027 1.182017 -0.039483 -0.145749 0.063403 -0.271775 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_010_0000_m000_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="Tire2.017-bl_mat-bsdf">
+		<rgb value="0.500000 0.500000 0.500000" name="specularReflectance"/>
+		<rgb value="0.031373 0.031373 0.031373" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.559898"/>
+	</bsdf>
+	<shape type="serialized" id="wheel_f_r_Untitled.049_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.470087 0.000000 -0.000000 0.005829 0.102667 0.005007 -0.002986 -0.000000 0.645838 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Tire2.017-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_049_0000_m000_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="Material #35.002-bl_mat-bsdf">
+		<rgb value="0.500000 0.500000 0.500000" name="specularReflectance"/>
+		<rgb value="0.056471 0.056471 0.056471" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.375311"/>
+	</bsdf>
+	<shape type="serialized" id="wheel_f_r_Untitled.049_0000_m001_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.470087 0.000000 -0.000000 0.005829 0.102667 0.005007 -0.002986 -0.000000 0.645838 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #35.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_049_0000_m001_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wheel_f_r_Untitled.049_0000_m002_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.470087 0.000000 -0.000000 0.005829 0.102667 0.005007 -0.002986 -0.000000 0.645838 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #36.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_049_0000_m002_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wheel_f_r_Untitled.049_0000_m003_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.470087 0.000000 -0.000000 0.005829 0.102667 0.005007 -0.002986 -0.000000 0.645838 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #37.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_049_0000_m003_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="flap_R03_Plane.021_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.077984 -0.024353 0.141941 -0.085819 -0.142208 0.038510 -0.071523 1.535917 -0.022741 -0.157308 -0.039483 -0.268970 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.021_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="wing_support_R03_Cube.030_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.002935 -0.081645 -0.120891 -0.071523 -0.074634 -0.127027 1.433235 -0.039483 0.145750 -0.063403 -0.133095 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_030_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="pin01_001_Cylinder.043_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.077984 -0.024353 0.141941 0.262850 -0.142208 0.038510 -0.071523 1.356194 -0.022741 -0.157308 -0.039483 -0.366944 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.043_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<bsdf type="diffuse" id="Default Metallic Paint.010-bl_mat-bsdf">
+		<rgb value="0.972549 0.866667 0.698039" name="reflectance"/>
+	</bsdf>
+	<shape type="serialized" id="doors_Untitled.037_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.036230 0.000000 -0.000000 0.005829 0.203406 0.005007 -0.002986 -0.000000 0.359268 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Default Metallic Paint.010-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_037_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="doors_Untitled.037_0000_m001_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.036230 0.000000 -0.000000 0.005829 0.203406 0.005007 -0.002986 -0.000000 0.359268 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #36.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_037_0000_m001_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="doors_Untitled.037_0000_m002_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.036230 0.000000 -0.000000 0.005829 0.203406 0.005007 -0.002986 -0.000000 0.359268 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #37.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_037_0000_m002_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="wheel_L02_Cylinder.034_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.077984 -0.024353 0.141941 0.161295 -0.142208 0.038510 -0.071523 1.079541 -0.022741 -0.157308 -0.039483 -0.197339 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.034_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="undercarriage_R04_Cube.027_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.160249 0.024172 0.023614 0.022908 0.017488 -0.038605 0.158195 1.174797 0.028915 0.157312 0.035193 -0.153188 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_027_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="undercarriage_tail03_Plane.002_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.044687 0.068393 0.015267 -0.071523 -0.001711 0.147320 1.470915 -0.039483 -0.157550 -0.020998 -0.904889 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Plane_002_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="fuselage02_Mesh.003_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.024353 0.077984 0.141941 0.162100 0.038510 0.142208 -0.071523 1.240125 -0.157308 0.022741 -0.039483 0.041048 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Mesh_003_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="fuselage06_Mesh.012_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.024353 0.077984 0.141941 0.162100 0.038510 0.142208 -0.071523 1.240125 -0.157308 0.022741 -0.039483 0.041048 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Mesh_012_0000_m000_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="rightWall.002-bl_mat-bsdf">
+		<rgb value="0.000000 0.000000 0.000000" name="specularReflectance"/>
+		<rgb value="0.112000 0.360000 0.072800" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.904837"/>
+	</bsdf>
+	<shape type="serialized" id="rightWall.002_rightWall.002_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 -0.000000 0.000000 0.000000 0.000000 1.123126 0.000000 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="rightWall.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/rightWall_002_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="nut01_Cylinder.037_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.123071 -0.040646 0.100115 0.016965 -0.108052 0.046496 -0.113951 1.259685 -0.000142 -0.151683 -0.061757 -0.220891 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.037_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="wing_support_L11_Cylinder.007_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.077984 -0.024353 0.141941 0.421105 -0.142208 0.038510 -0.071523 1.249563 -0.022741 -0.157308 -0.039483 -0.237953 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.007_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<bsdf type="roughplastic" id="backWall.002-bl_mat-bsdf">
+		<rgb value="0.000000 0.000000 0.000000" name="specularReflectance"/>
+		<rgb value="0.580000 0.568000 0.544000" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.904837"/>
+	</bsdf>
+	<shape type="serialized" id="backWall.002_backWall.002_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-1.000000 -0.000000 -0.000000 0.000000 0.000000 1.000000 -0.000000 0.000000 0.000000 -0.000000 -1.000000 0.033412 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="backWall.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/backWall_002_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="aileron_R01_Cube.025_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.141941 0.024353 0.077984 -0.340507 0.071523 -0.038510 0.142208 1.674819 0.039483 0.157308 0.022741 -0.181070 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_025_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wing_support_R02_Cylinder.058_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.109193 -0.119606 -0.024353 -0.126967 -0.113578 -0.111530 0.038510 1.438390 -0.044709 -0.008787 -0.157308 -0.162441 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_058_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="rear_bumper_Untitled.036_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 -0.000000 0.570700 0.000000 0.000000 0.005829 0.087778 0.005007 -0.002986 0.000000 0.239005 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #36.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_036_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="rear_bumper_Untitled.036_0000_m001_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 -0.000000 0.570700 0.000000 0.000000 0.005829 0.087778 0.005007 -0.002986 0.000000 0.239005 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #37.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_036_0000_m001_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="Material #60.002-bl_mat-bsdf">
+		<rgb value="1.000000 1.000000 1.000000" name="specularReflectance"/>
+		<rgb value="0.000000 0.000000 0.000000" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.375311"/>
+	</bsdf>
+	<shape type="serialized" id="rear_bumper_Untitled.036_0000_m002_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 -0.000000 0.570700 0.000000 0.000000 0.005829 0.087778 0.005007 -0.002986 0.000000 0.239005 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #60.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_036_0000_m002_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="Material #61.002-bl_mat-bsdf">
+		<rgb value="1.000000 1.000000 1.000000" name="specularReflectance"/>
+		<rgb value="0.000000 0.000000 0.000000" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.375311"/>
+	</bsdf>
+	<shape type="serialized" id="rear_bumper_Untitled.036_0000_m003_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 -0.000000 0.570700 0.000000 0.000000 0.005829 0.087778 0.005007 -0.002986 0.000000 0.239005 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #61.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_036_0000_m003_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="Material #62.002-bl_mat-bsdf">
+		<rgb value="1.000000 1.000000 1.000000" name="specularReflectance"/>
+		<rgb value="0.000000 0.000000 0.000000" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.375311"/>
+	</bsdf>
+	<shape type="serialized" id="rear_bumper_Untitled.036_0000_m004_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 -0.000000 0.570700 0.000000 0.000000 0.005829 0.087778 0.005007 -0.002986 0.000000 0.239005 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #62.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_036_0000_m004_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="undercarriage_tail05_Cube.028_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.080726 0.012559 0.005202 -0.071523 0.134954 -0.059106 1.469520 -0.039483 0.045742 0.152218 -0.938506 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_028_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="fuselage13_Cylinder.003_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.132910 -0.071523 0.038510 0.142208 1.176877 -0.039483 -0.157308 0.022741 -0.168748 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_003_0000_m000_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="tires-bl_mat-bsdf">
+		<rgb value="0.150000 0.150000 0.150000" name="specularReflectance"/>
+		<rgb value="0.005754 0.005754 0.005754" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.367879"/>
+	</bsdf>
+	<shape type="serialized" id="wheel_tail01_Cylinder.013_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.080741 -0.012464 0.141941 -0.003467 -0.134885 0.059264 -0.071523 1.462380 -0.045921 -0.152165 -0.039483 -0.956777 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="tires-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_013_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wheel_tail01_Cylinder.013_0000_m001_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.080741 -0.012464 0.141941 -0.003467 -0.134885 0.059264 -0.071523 1.462380 -0.045921 -0.152165 -0.039483 -0.956777 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_013_0000_m001_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="interior_frame01_Cylinder.019_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.077984 -0.024353 0.141941 0.184356 -0.142208 0.038510 -0.071523 1.395805 -0.022741 -0.157308 -0.039483 -0.160957 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_b-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_019_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="undercarriage_R03_Cylinder.002_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.023560 0.024245 0.160246 0.063900 0.158236 -0.038456 -0.017446 1.170267 0.035045 0.157337 -0.028957 -0.159987 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.002_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="wings_Untitled.053_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.223972 0.000000 -0.000000 0.005829 0.154633 0.005007 -0.002986 -0.000000 0.898954 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #37.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_053_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wings_Untitled.053_0000_m001_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.223972 0.000000 -0.000000 0.005829 0.154633 0.005007 -0.002986 -0.000000 0.898954 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #36.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_053_0000_m001_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="Material #117.002-bl_mat-bsdf">
+		<rgb value="0.000000 0.000000 0.000000" name="specularReflectance"/>
+		<rgb value="0.400000 0.400000 0.400000" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.375311"/>
+	</bsdf>
+	<shape type="serialized" id="wings_Untitled.053_0000_m002_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.223972 0.000000 -0.000000 0.005829 0.154633 0.005007 -0.002986 -0.000000 0.898954 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #117.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_053_0000_m002_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="rudder09_Plane.016_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.080757 -0.024353 0.140381 0.172221 -0.135000 0.038510 0.084342 1.454557 -0.045551 -0.157308 -0.001085 -0.909671 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Plane_016_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="wing_light_L01_Cylinder.035_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.077984 0.024353 0.912059 -0.071523 0.142208 -0.038510 1.022702 -0.039483 0.022741 0.157308 -0.351143 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.035_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="rudder_spring_L_Mesh.007_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.141730 -0.047381 -0.065141 0.024153 0.072252 -0.017661 -0.144822 1.470873 0.034448 -0.157899 0.035745 -0.908194 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Mesh.007_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="flap_L03_Plane.027_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.077984 -0.024353 0.141941 0.380939 -0.142208 0.038510 -0.071523 1.300721 -0.022741 -0.157308 -0.039483 -0.398806 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.027_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="aileron_controll_R05_Cylinder.060_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.090606 0.056165 -0.124329 -0.282174 0.110959 -0.056498 -0.106385 1.604255 -0.079375 -0.143092 -0.006796 -0.058889 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_060_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="pin02-2_003_Cylinder.042_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.143693 -0.056492 -0.054615 0.079097 -0.067926 0.146529 0.027149 1.217739 0.039499 0.046472 -0.151993 -0.016812 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.042_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="pin06_001_Cylinder.031_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.024353 0.141941 0.077983 0.013925 -0.038509 -0.071523 0.142208 1.495552 0.157308 -0.039483 0.022741 -0.913292 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.031_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="interior_frame03_Cylinder.020_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.069242 0.146291 0.025024 0.139315 -0.092853 -0.021158 -0.133238 1.414415 -0.115783 -0.070520 0.091886 -0.147884 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_b-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_020_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="rudder03_Plane.018_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024352 0.077984 0.031825 -0.071523 0.038510 0.142208 1.485385 -0.039483 -0.157308 0.022741 -0.912589 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.018_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="wing_support_R05_Cube.029_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.104938 0.004351 -0.125662 0.025862 -0.123350 -0.028175 -0.103983 1.249688 -0.024381 0.161273 -0.014776 -0.228533 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_029_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="fuselage03_Mesh.010_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.024353 0.077984 0.141941 0.162100 0.038510 0.142208 -0.071523 1.240125 -0.157308 0.022741 -0.039483 0.041048 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Mesh_010_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="horizontal_stab01_Cube.002_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.048653 -0.071523 0.038510 0.142208 1.505292 -0.039483 -0.157308 0.022741 -0.847142 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_002_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="wing_support_R06_Plane.024_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.024353 -0.077984 -0.289623 -0.071523 -0.038510 -0.142208 1.612610 -0.039484 0.157307 -0.022741 -0.037531 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.024_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="wheel_R01_Plane.022_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.077984 -0.024353 -0.073254 -0.071523 -0.142208 0.038510 1.197729 -0.039483 -0.022741 -0.157308 -0.132096 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Plane_022_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wheel_R01_Plane.022_0000_m001_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.077984 -0.024353 -0.073254 -0.071523 -0.142208 0.038510 1.197729 -0.039483 -0.022741 -0.157308 -0.132096 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="tires-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Plane_022_0000_m001_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="pin04_Cylinder.054_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141994 0.024353 -0.077886 0.171167 -0.071426 -0.038510 -0.142257 1.448830 -0.039468 0.157308 -0.022768 -0.910910 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_054_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wing_support_R08_Cylinder.047_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.125666 -0.004236 0.104937 0.017675 -0.103956 0.028286 -0.123348 1.259455 -0.014934 -0.161257 -0.024393 -0.228163 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_047_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="undercarriage_tail04_Cube.015_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.012559 0.080726 0.006191 -0.071523 0.059106 0.134954 1.470268 -0.039483 -0.152219 0.045742 -0.936348 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_015_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="rudder10_Plane.015_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.080757 0.024353 -0.140381 0.091984 -0.135000 -0.038510 -0.084342 1.588689 -0.045551 0.157308 0.001085 -0.864413 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.015_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="wheel_L01_Plane_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.077984 0.024353 0.175872 -0.071523 0.142208 -0.038510 1.072196 -0.039483 0.022741 0.157308 -0.201394 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Plane_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wheel_L01_Plane_0000_m001_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.077984 0.024353 0.175872 -0.071523 0.142208 -0.038510 1.072196 -0.039483 0.022741 0.157308 -0.201394 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="tires-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Plane_0000_m001_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wing_wire_R01_Mesh.019_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.024353 -0.077984 0.024109 -0.071523 -0.038510 -0.142208 1.257056 -0.039484 0.157307 -0.022741 -0.232915 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Mesh_019_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="rudder11_Plane.014_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.106198 -0.024353 -0.122273 -0.079863 0.116304 0.038510 -0.108683 1.576473 0.044913 -0.157307 -0.007677 -0.840800 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Plane_014_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="fuselage01_Mesh_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.024353 0.077984 0.141941 0.162100 0.038510 0.142208 -0.071523 1.240125 -0.157308 0.022741 -0.039483 0.041048 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Mesh_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="undercarriage_tail_wire_L02_Mesh.005_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.086098 -0.046395 -0.142638 0.015074 0.191760 -0.019941 0.072197 1.467489 -0.049365 -0.158542 0.035680 -0.938450 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Mesh.005_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<bsdf type="diffuse" id="Default Metallic Paint.011-bl_mat-bsdf">
+		<rgb value="0.972549 0.866667 0.698039" name="reflectance"/>
+	</bsdf>
+	<shape type="serialized" id="body_Untitled.047_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.066068 0.000000 -0.000000 0.005829 0.206594 0.005007 -0.002986 -0.000000 0.599184 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Default Metallic Paint.011-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_047_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="body_Untitled.047_0000_m001_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.066068 0.000000 -0.000000 0.005829 0.206594 0.005007 -0.002986 -0.000000 0.599184 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #37.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_047_0000_m001_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="body_Untitled.047_0000_m002_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.066068 0.000000 -0.000000 0.005829 0.206594 0.005007 -0.002986 -0.000000 0.599184 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #36.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_047_0000_m002_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="engine03_Plane.007_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.077984 0.024353 0.145227 -0.071523 0.142208 -0.038510 1.192408 -0.039483 0.022741 0.157308 0.066825 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Plane_007_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="pin06_Cylinder.031_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.024353 0.141941 0.077983 0.031081 -0.038509 -0.071523 0.142208 1.486908 0.157308 -0.039483 0.022741 -0.918064 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.031_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="fuselage_lock02_003_Plane.020_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.056492 0.054615 -0.143693 0.077081 -0.146529 -0.027149 -0.067926 1.224764 -0.046472 0.151993 0.039499 -0.014833 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.020_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="rudder_frame02_Cylinder.026_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.118608 0.046198 0.103051 0.019654 -0.087442 0.132141 0.041404 1.477903 -0.071468 -0.085007 0.120366 -0.901779 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.026_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<bsdf type="diffuse" id="Default Metallic Paint.012-bl_mat-bsdf">
+		<rgb value="0.972549 0.866667 0.698039" name="reflectance"/>
+	</bsdf>
+	<shape type="serialized" id="trunck_Untitled.041_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.516100 0.000000 -0.000000 0.005829 0.172919 0.005007 -0.002986 -0.000000 0.272256 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Default Metallic Paint.012-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_041_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="trunck_Untitled.041_0000_m001_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.516100 0.000000 -0.000000 0.005829 0.172919 0.005007 -0.002986 -0.000000 0.272256 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #36.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_041_0000_m001_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="trunck_Untitled.041_0000_m002_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.516100 0.000000 -0.000000 0.005829 0.172919 0.005007 -0.002986 -0.000000 0.272256 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #37.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_041_0000_m002_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="fuselage16_Cube.020_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.099924 -0.035534 0.124797 0.045421 -0.127485 0.056230 -0.086066 1.455689 -0.024174 -0.149657 -0.061968 -0.838525 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_020_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="engine10_Cylinder.018_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.080749 0.012414 0.128217 -0.071523 0.134848 -0.059348 1.171814 -0.039483 0.046015 0.152136 0.042981 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_b-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_018_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="aileron_L04_Cube.017_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.038772 0.071911 0.647045 -0.071523 0.010695 0.146941 1.191008 -0.039483 -0.158758 -0.007663 -0.406456 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cube.017_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="fuselage_lock01_003_Plane.019_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.052792 0.053495 -0.145510 0.097453 -0.147860 -0.028836 -0.064246 1.220322 -0.046606 0.152081 0.039002 0.046160 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.019_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="elevator01_Cube.003_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.043833 -0.071523 0.038510 0.142208 1.519040 -0.039483 -0.157308 0.022741 -0.889376 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_003_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="nut01_002_Cylinder.010_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.020036 0.007773 0.162357 0.140348 0.159971 -0.029931 -0.018308 1.197513 0.028804 0.160827 -0.011254 -0.255212 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.010_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="fuselage_door_Mesh.016_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.024353 0.077984 0.141941 0.162100 0.038510 0.142208 -0.071523 1.240125 -0.157308 0.022741 -0.039483 0.041048 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Mesh_016_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="pin02-2_001_Cylinder.042_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.037534 0.158778 0.014231 0.162665 -0.159218 0.038063 -0.004741 1.175630 -0.007904 -0.012749 0.163085 -0.040087 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.042_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="undercarriage_L04_Cube.005_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.105866 -0.024331 0.122564 0.101395 -0.116659 0.038314 0.108372 1.135248 -0.044774 -0.157359 0.007435 -0.175021 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_005_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wing_support_L05_Cube.009_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.156276 -0.043880 0.021770 0.125118 -0.008274 0.048094 0.156334 1.199673 -0.048280 -0.150277 0.043676 -0.256142 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_009_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="radiator_Untitled.050_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.453391 0.000000 -0.000000 0.005829 0.206142 0.005007 -0.002986 -0.000000 0.850451 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #36.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_050_0000_m000_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="Material #96.002-bl_mat-bsdf">
+		<rgb value="1.000000 1.000000 1.000000" name="specularReflectance"/>
+		<rgb value="0.746667 0.636863 0.307451" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.375311"/>
+	</bsdf>
+	<shape type="serialized" id="radiator_Untitled.050_0000_m001_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.453391 0.000000 -0.000000 0.005829 0.206142 0.005007 -0.002986 -0.000000 0.850451 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #96.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_050_0000_m001_0_000000.serialized"/>
+	</shape>
+	<texture type="bitmap" id="Map #1">
+		<string name="filename" value="Maps/MM.JPG"/>
+	</texture>
+	<bsdf type="diffuse" id="13 - Default.002-bl_mat-bsdf">
+		<ref name="reflectance" id="Map #1"/>
+	</bsdf>
+	<shape type="serialized" id="radiator_Untitled.050_0000_m002_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.453391 0.000000 -0.000000 0.005829 0.206142 0.005007 -0.002986 -0.000000 0.850451 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="13 - Default.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_050_0000_m002_0_000000.serialized"/>
+	</shape>
+	<bsdf type="diffuse" id="Default Metallic Paint.014-bl_mat-bsdf">
+		<rgb value="0.972549 0.866667 0.698039" name="reflectance"/>
+	</bsdf>
+	<shape type="serialized" id="radiator_Untitled.050_0000_m003_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.453391 0.000000 -0.000000 0.005829 0.206142 0.005007 -0.002986 -0.000000 0.850451 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Default Metallic Paint.014-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_050_0000_m003_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="rudder02_Plane.017_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.022503 -0.071523 0.038510 0.142208 1.491230 -0.039483 -0.157308 0.022741 -0.915678 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Plane_017_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="wing_light_R02_Cylinder.036_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.077984 0.024353 -0.543106 -0.071523 0.142208 -0.038510 1.755951 -0.039483 0.022741 0.157308 0.053633 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.036_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="wing_support_L01_Cube.008_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.156276 -0.043880 0.021770 0.125118 -0.008274 0.048094 0.156334 1.199673 -0.048280 -0.150277 0.043676 -0.256142 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_008_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="pin05_Cylinder.025_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.106198 0.024353 0.122273 0.010393 0.116304 -0.038510 0.108683 1.476568 0.044913 0.157307 0.007677 -0.879230 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_025_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="pin05_001_Cylinder.011_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.160155 -0.024353 0.024063 0.032723 -0.017909 0.038510 0.158171 1.465317 -0.029178 -0.157308 0.034996 -0.885441 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_011_0000_m000_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="Tire2.012-bl_mat-bsdf">
+		<rgb value="0.500000 0.500000 0.500000" name="specularReflectance"/>
+		<rgb value="0.031373 0.031373 0.031373" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.559898"/>
+	</bsdf>
+	<shape type="serialized" id="wheel_f_l_Untitled.044_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.281191 0.000000 -0.000000 0.005829 0.102667 0.005007 -0.002986 -0.000000 0.962592 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Tire2.012-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_044_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wheel_f_l_Untitled.044_0000_m001_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.281191 0.000000 -0.000000 0.005829 0.102667 0.005007 -0.002986 -0.000000 0.962592 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #35.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_044_0000_m001_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wheel_f_l_Untitled.044_0000_m002_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.281191 0.000000 -0.000000 0.005829 0.102667 0.005007 -0.002986 -0.000000 0.962592 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #36.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_044_0000_m002_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wheel_f_l_Untitled.044_0000_m003_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.281191 0.000000 -0.000000 0.005829 0.102667 0.005007 -0.002986 -0.000000 0.962592 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #37.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_044_0000_m003_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="pin02-1_001_Sphere.001_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.163039 -0.014564 -0.005278 0.167519 0.004703 0.006626 -0.163572 1.176857 0.014760 -0.162990 -0.006178 0.023948 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Sphere.001_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="pin04_001_Cylinder.028_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.141888 -0.024353 -0.078080 -0.082273 0.071620 0.038510 -0.142159 1.576537 0.039499 -0.157307 -0.022714 -0.840411 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_028_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wing_support_L08_Cylinder.012_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.021813 0.043847 0.156280 0.136779 0.156287 -0.048246 -0.008278 1.199440 0.043822 0.150238 -0.048269 -0.261294 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_012_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="wing_wire_R03_Cylinder.022_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.070335 -0.041561 -0.141941 -0.321244 0.147247 0.004919 0.071524 1.673396 -0.013887 -0.158336 0.039480 -0.201637 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.022_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="fuselage_wings_Cube.001_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.174717 -0.071523 0.038510 0.142208 1.405096 -0.039483 -0.157308 0.022741 -0.212441 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_001_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="exhaust_Cylinder.041_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.103785 0.003567 0.126640 0.090934 -0.118409 0.060950 0.095322 1.206891 -0.045054 -0.151968 0.041204 -0.029803 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_041_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="aileron_controll_R01_Cylinder.052_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.103783 -0.124329 0.024353 -0.288229 0.118410 -0.106385 -0.038510 1.610129 0.045055 -0.006796 0.157307 -0.040068 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_052_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="wing_support_R11_Cylinder.007_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.077984 -0.022354 -0.142269 -0.077446 -0.142208 0.037500 0.072058 1.500781 -0.022741 -0.157847 0.037267 -0.099273 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.007_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="pin01_002_Cylinder.043_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.077984 -0.024353 0.141941 0.028862 -0.142208 0.038510 -0.071523 1.474099 -0.022741 -0.157308 -0.039483 -0.301857 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.043_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="fuselage_door02_Mesh.017_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.024353 0.077984 0.141941 0.162100 0.038510 0.142208 -0.071523 1.240125 -0.157308 0.022741 -0.039483 0.041048 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Mesh_017_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="fuselage14_Cylinder.046_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.079554 0.141067 -0.024352 0.028573 0.141405 -0.073097 0.038510 1.243326 0.022301 -0.039732 -0.157308 -0.228979 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_046_0000_m000_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="Tire2.014-bl_mat-bsdf">
+		<rgb value="0.500000 0.500000 0.500000" name="specularReflectance"/>
+		<rgb value="0.031373 0.031373 0.031373" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.559898"/>
+	</bsdf>
+	<shape type="serialized" id="wheel_r_r_Untitled.045_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.290452 0.000000 -0.000000 0.005829 0.102667 0.005007 -0.002986 -0.000000 0.192293 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Tire2.014-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_045_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wheel_r_r_Untitled.045_0000_m001_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.290452 0.000000 -0.000000 0.005829 0.102667 0.005007 -0.002986 -0.000000 0.192293 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #35.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_045_0000_m001_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wheel_r_r_Untitled.045_0000_m002_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.290452 0.000000 -0.000000 0.005829 0.102667 0.005007 -0.002986 -0.000000 0.192293 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #36.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_045_0000_m002_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wheel_r_r_Untitled.045_0000_m003_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.290452 0.000000 -0.000000 0.005829 0.102667 0.005007 -0.002986 -0.000000 0.192293 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #37.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_045_0000_m003_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="pin02-1_Sphere.001_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.158778 -0.014231 0.037534 0.162534 -0.038063 0.004741 -0.159218 1.176188 0.012749 -0.163085 -0.007904 -0.040059 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Sphere.001_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="pin02-1_002_Sphere.001_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.090287 0.053495 -0.125731 0.104205 -0.124887 -0.028836 -0.101949 1.208600 -0.055438 0.152081 0.024896 0.041562 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Sphere.001_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<bsdf type="roughplastic" id="Material #63.002-bl_mat-bsdf">
+		<rgb value="0.000000 0.000000 0.000000" name="specularReflectance"/>
+		<rgb value="0.119216 0.119216 0.119216" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.375311"/>
+	</bsdf>
+	<shape type="serialized" id="bottom_Untitled.051_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.574650 0.000000 -0.000000 0.005829 0.072715 0.005007 -0.002986 -0.000000 0.333654 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #63.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_051_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="backWall.000_backWall.000_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 -0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="backWall.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/backWall_000_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="undercarriage_tail02_Plane.001_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.018313 -0.071523 0.038510 0.142208 1.476865 -0.039483 -0.157308 0.022741 -0.904719 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Plane_001_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="fuselage08_Plane.010_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.077984 -0.024353 0.141941 0.155949 -0.142208 0.038510 -0.071523 1.342121 -0.022741 -0.157308 -0.039483 -0.165832 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Plane_010_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="rudder05_Plane.013_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.012115 0.080794 0.021139 -0.071523 0.059847 0.134627 1.470247 -0.039483 -0.151965 0.046578 -0.882568 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Plane_013_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="aileron_controll_R03_Cylinder.061_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.090606 0.056165 -0.124329 -0.285981 0.110959 -0.056498 -0.106385 1.608084 -0.079375 -0.143092 -0.006796 -0.049191 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_061_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="rudder08_Plane.028_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.160155 0.024353 -0.024063 0.169747 -0.017909 -0.038510 -0.158171 1.450696 -0.029178 0.157308 -0.034996 -0.910233 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Plane_028_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="pin07_Cylinder.032_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.142732 0.080029 -0.006682 0.015281 0.074976 0.137676 0.047388 1.492824 0.028774 0.038240 -0.156625 -0.903647 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.032_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="fuselage_wings02_Cube.019_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.174717 -0.071523 0.038510 0.142208 1.405096 -0.039483 -0.157308 0.022741 -0.212441 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_019_0000_m000_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="Tire2.013-bl_mat-bsdf">
+		<rgb value="0.500000 0.500000 0.500000" name="specularReflectance"/>
+		<rgb value="0.031373 0.031373 0.031373" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.559898"/>
+	</bsdf>
+	<shape type="serialized" id="wheel_l_Untitled.039_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.074734 0.000000 -0.000000 0.005829 0.200984 0.005007 -0.002986 -0.000000 0.839472 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Tire2.013-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_039_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wheel_l_Untitled.039_0000_m001_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.074734 0.000000 -0.000000 0.005829 0.200984 0.005007 -0.002986 -0.000000 0.839472 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #35.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_039_0000_m001_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wheel_l_Untitled.039_0000_m002_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.074734 0.000000 -0.000000 0.005829 0.200984 0.005007 -0.002986 -0.000000 0.839472 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #36.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_039_0000_m002_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wheel_l_Untitled.039_0000_m003_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.074734 0.000000 -0.000000 0.005829 0.200984 0.005007 -0.002986 -0.000000 0.839472 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #37.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_039_0000_m003_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="undercarriage_tail01_Cube.014_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.019318 -0.071523 0.038510 0.142208 1.468840 -0.039483 -0.157308 0.022741 -0.886569 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_b-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_014_0000_m000_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="floor.002-bl_mat-bsdf">
+		<rgb value="0.000000 0.000000 0.000000" name="specularReflectance"/>
+		<rgb value="0.580000 0.568000 0.544000" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.904837"/>
+	</bsdf>
+	<shape type="serialized" id="floor.002_floor.002_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 -0.000000 0.000000 0.000000 0.000000 1.147153 0.000000 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="floor.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/floor_002_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="pin07_001_Cylinder.032_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.141497 0.080003 -0.019994 0.032366 0.070217 0.137711 0.054102 1.484215 0.043241 0.038171 -0.153281 -0.908400 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.032_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<bsdf type="roughplastic" id="Material #48.002-bl_mat-bsdf">
+		<rgb value="0.500000 0.500000 0.500000" name="specularReflectance"/>
+		<rgb value="0.056471 0.056471 0.056471" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.375311"/>
+	</bsdf>
+	<shape type="serialized" id="roof_Untitled.040_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 -0.000000 0.029692 0.000000 0.000000 0.005829 0.409467 0.005007 -0.002986 0.000000 0.683308 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #48.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_040_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="roof_Untitled.040_0000_m001_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 -0.000000 0.029692 0.000000 0.000000 0.005829 0.409467 0.005007 -0.002986 0.000000 0.683308 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #49.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_040_0000_m001_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="roof_Untitled.040_0000_m002_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 -0.000000 0.029692 0.000000 0.000000 0.005829 0.409467 0.005007 -0.002986 0.000000 0.683308 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #36.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_040_0000_m002_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="aileron_controll_L01_Cylinder.017_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.160595 0.020923 -0.024352 0.634500 0.014809 0.158491 0.038510 1.145170 0.028487 0.035561 -0.157308 -0.296741 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_017_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="undercarriage_R02_Cylinder.002_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.023596 -0.024326 -0.160229 -0.041516 0.158225 0.038497 0.017456 1.181744 0.035071 -0.157315 0.029048 -0.140938 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.002_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="undercarriage_L02_Cylinder.002_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.122580 0.024379 0.105837 0.144134 0.108347 -0.038523 -0.116613 1.088196 0.007537 0.157300 -0.044962 -0.192579 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.002_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="aileron_R04_Cube.017_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.038772 0.071911 -0.305672 -0.071523 0.010695 0.146941 1.671077 -0.039483 -0.158758 -0.007663 -0.141444 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cube.017_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="wing_wire_L03_Cylinder.022_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.070330 -0.041584 -0.141937 0.631463 0.147250 0.004931 0.071518 1.193333 -0.013885 -0.158329 0.039506 -0.466647 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.022_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="rudder_frame04_Cylinder.024_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.137170 0.082819 0.033868 0.019591 -0.065468 0.135153 -0.065340 1.477789 -0.060992 0.041188 0.146305 -0.901797 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.024_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<bsdf type="roughplastic" id="light.001-mts_ntree-bsdf">
+		<string name="distribution" value="beckmann"/>
+		<rgb value="0.000000 0.000000 0.000000" name="specularReflectance"/>
+		<boolean name="nonlinear" value="false"/>
+		<float name="alpha" value="0.904837"/>
+		<rgb value="0.624000 0.624000 0.624000" name="diffuseReflectance"/>
+		<float name="intIOR" value="1.490000"/>
+		<float name="extIOR" value="1.000277"/>
+	</bsdf>
+	<shape type="serialized" id="light.000_light.000_0000_m000_0.000000">
+		<emitter type="area" name="emitter">
+			<float name="samplingWeight" value="1.000000"/>
+			<rgb value="82.525065 82.525065 82.525065" name="radiance"/>
+		</emitter>
+		<string name="filename" value="Scene/00481/light_000_0000_m000_0_000000.serialized"/>
+		<ref name="bsdf" id="light.001-mts_ntree-bsdf"/>
+		<transform name="toWorld">
+			<matrix value="-1.560000 0.000000 0.000000 -0.026990 0.000000 0.000000 0.585092 0.789524 0.000000 1.000000 -0.000000 -2.012606 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+	</shape>
+	<shape type="serialized" id="windshield01_Mesh.008_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.024353 0.077984 0.141941 0.162100 0.038510 0.142208 -0.071523 1.240125 -0.157308 0.022741 -0.039483 0.041048 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="glass-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Mesh_008_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="wing_wire_L02_Cylinder.021_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.074466 -0.028496 -0.143054 0.619937 0.145848 0.012099 0.073510 1.169930 -0.002222 -0.160821 0.030879 -0.465685 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.021_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="aileron_L03_Cube.018_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.041096 0.070609 0.631462 -0.071523 0.005897 0.147212 1.193334 -0.039483 -0.158424 -0.012837 -0.466646 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_018_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="flap_R02_Plane.021_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.077984 -0.024353 0.141941 0.028353 -0.142208 0.038510 -0.071523 1.476634 -0.022741 -0.157308 -0.039483 -0.301157 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.021_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="wire_R02_Cylinder.027_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.122273 0.024353 -0.106198 0.004868 -0.108683 -0.038510 0.116304 1.482593 -0.007677 0.157307 0.044913 -0.876900 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_027_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="aileron_controll_R02_Plane.025_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.090606 0.056165 -0.124329 -0.283856 0.110959 -0.056498 -0.106385 1.605846 -0.079375 -0.143092 -0.006796 -0.054747 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Plane_025_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="flap_R01_Cube.024_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 -0.085322 -0.071523 0.038510 0.142208 1.533389 -0.039483 -0.157308 0.022741 -0.269665 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_024_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="fuselage_lock02_002_Plane.020_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.090287 0.053495 -0.125731 0.100118 -0.124887 -0.028836 -0.101949 1.214409 -0.055438 0.152081 0.024896 0.044101 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.020_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="nut01_001_Cylinder.037_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.125666 -0.004236 0.104938 0.016045 -0.103956 0.028286 -0.123348 1.261371 -0.014934 -0.161257 -0.024393 -0.227784 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.037_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="prop01_Cube_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.045225 -0.024353 -0.155510 0.166078 0.151131 0.038510 -0.049982 1.223818 0.043999 -0.157308 0.011838 0.084889 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cube_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="rudder12_Plane.029_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.161796 0.024353 -0.007121 -0.077949 -0.012779 -0.038510 0.158668 1.580616 0.021919 0.157308 0.039945 -0.840082 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Plane_029_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="fuselage15_Cylinder.005_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.076402 0.142799 0.024352 0.118753 -0.142994 -0.069939 -0.038510 1.197885 -0.023178 -0.039228 0.157308 -0.254064 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_005_0000_m000_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="Tire2.015-bl_mat-bsdf">
+		<rgb value="0.500000 0.500000 0.500000" name="specularReflectance"/>
+		<rgb value="0.031373 0.031373 0.031373" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.559898"/>
+	</bsdf>
+	<shape type="serialized" id="wheel_r_l_Untitled.052_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.479347 0.000000 -0.000000 0.005829 0.102667 0.005007 -0.002986 -0.000000 0.509047 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Tire2.015-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_052_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wheel_r_l_Untitled.052_0000_m001_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.479347 0.000000 -0.000000 0.005829 0.102667 0.005007 -0.002986 -0.000000 0.509047 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #35.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_052_0000_m001_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wheel_r_l_Untitled.052_0000_m002_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.479347 0.000000 -0.000000 0.005829 0.102667 0.005007 -0.002986 -0.000000 0.509047 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #36.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_052_0000_m002_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wheel_r_l_Untitled.052_0000_m003_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 0.479347 0.000000 -0.000000 0.005829 0.102667 0.005007 -0.002986 -0.000000 0.509047 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #37.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_052_0000_m003_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="undercarriage_R05_Cylinder.004_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.148923 0.024353 -0.063644 0.047615 -0.067839 -0.038510 0.144002 1.218786 0.006447 0.157308 0.045106 -0.145265 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.004_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="aileron_controll_R04_Cylinder.045_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.090606 0.056165 -0.124329 -0.282267 0.110959 -0.056498 -0.106385 1.604246 -0.079375 -0.143092 -0.006796 -0.058797 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_045_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="headlight_Untitled.042_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.553701 0.000000 -0.000000 0.005829 0.186954 0.005007 -0.002986 -0.000000 0.744165 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #37.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_042_0000_m000_0_000000.serialized"/>
+	</shape>
+	<bsdf type="diffuse" id="Material #94.002-bl_mat-bsdf">
+		<rgb value="0.000000 0.000000 0.000000" name="reflectance"/>
+	</bsdf>
+	<shape type="serialized" id="headlight_Untitled.042_0000_m001_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.553701 0.000000 -0.000000 0.005829 0.186954 0.005007 -0.002986 -0.000000 0.744165 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #94.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_042_0000_m001_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="headlight_Untitled.042_0000_m002_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.553701 0.000000 -0.000000 0.005829 0.186954 0.005007 -0.002986 -0.000000 0.744165 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #36.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_042_0000_m002_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="Material #95.002-bl_mat-bsdf">
+		<rgb value="1.000000 1.000000 1.000000" name="specularReflectance"/>
+		<rgb value="0.000000 0.000000 0.000000" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.375311"/>
+	</bsdf>
+	<shape type="serialized" id="headlight_Untitled.042_0000_m003_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.553701 0.000000 -0.000000 0.005829 0.186954 0.005007 -0.002986 -0.000000 0.744165 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #95.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_042_0000_m003_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="headlight_Untitled.042_0000_m004_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.553701 0.000000 -0.000000 0.005829 0.186954 0.005007 -0.002986 -0.000000 0.744165 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #96.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_042_0000_m004_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="flap_L02_Plane.027_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.077984 -0.024353 0.141941 0.265317 -0.142208 0.038510 -0.071523 1.357229 -0.022741 -0.157308 -0.039483 -0.367073 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.027_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="interior_seat_Plane.011_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.105378 -0.071523 0.038510 0.142208 1.234490 -0.039483 -0.157308 0.022741 -0.152660 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_b-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Plane_011_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="wing_light_L02_Cylinder.036_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.077984 0.024353 0.912059 -0.071523 0.142208 -0.038510 1.022702 -0.039483 0.022741 0.157308 -0.351143 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.036_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="rudder06_Plane.012_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.160155 -0.024353 0.024063 0.034599 -0.017909 0.038510 0.158171 1.465809 -0.029178 -0.157308 0.034996 -0.885611 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.012_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="wing_support_L10_Cylinder.007_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.077984 -0.024353 0.141941 0.404210 -0.142208 0.038510 -0.071523 1.276281 -0.022741 -0.157308 -0.039483 -0.347088 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.007_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="undercarriage_L03_Cylinder.002_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.122575 -0.024460 -0.105824 0.074484 0.108355 0.038564 0.116593 1.164934 0.007505 -0.157278 0.045046 -0.162931 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.002_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="pin03_Cylinder.029_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.080757 0.024353 -0.140381 0.091703 -0.135000 -0.038510 -0.084342 1.590551 -0.045551 0.157308 0.001085 -0.863914 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_029_0000_m000_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="ceiling.002-bl_mat-bsdf">
+		<rgb value="0.000000 0.000000 0.000000" name="specularReflectance"/>
+		<rgb value="0.580000 0.568000 0.544000" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.904837"/>
+	</bsdf>
+	<shape type="serialized" id="ceiling.002_ceiling.002_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 -0.000000 0.000000 0.000000 0.000000 1.117222 0.000000 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="ceiling.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/ceiling_002_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wing_light_R03_Cylinder.050_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.077984 0.024353 -0.541959 -0.071523 0.142208 -0.038510 1.754136 -0.039483 0.022741 0.157308 0.061048 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="mirror-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_050_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="Cube.001_Cube.034_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.000000 -1.550000 0.000000 -0.140378 0.000000 0.000000 0.500000 0.500082 -0.100000 0.000000 0.000000 0.076229 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<string name="filename" value="Scene/00481/Cube_034_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="engine07_Cube.021_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.159459 -0.071523 0.038510 0.142208 1.232774 -0.039483 -0.157308 0.022741 0.051582 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_021_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="undercarriage_tail_wire_R02_Mesh.005_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.082564 -0.057366 -0.141131 -0.001325 0.194564 -0.010968 0.070799 1.475752 -0.044150 -0.155810 0.043610 -0.933889 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Mesh.005_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="fuselage11_Mesh.015_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.024353 0.077984 0.141941 0.162100 0.038510 0.142208 -0.071523 1.240125 -0.157308 0.022741 -0.039483 0.041048 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Mesh_015_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="fuselage07_Mesh.004_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.024353 0.077984 0.141941 0.143116 0.038510 0.142208 -0.071523 1.190261 -0.157308 0.022741 -0.039483 0.063128 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Mesh_004_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="undercarriage02_Cylinder_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 0.077984 0.024353 0.068868 -0.071523 0.142208 -0.038510 1.168225 -0.039483 0.022741 0.157308 -0.163877 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="rudder04_Plane.018_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024352 0.077984 0.014687 -0.071523 0.038510 0.142208 1.494021 -0.039483 -0.157308 0.022741 -0.907821 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.018_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="rudder_frame01_Cylinder.023_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.018747 -0.071523 0.038510 0.142208 1.476249 -0.039483 -0.157308 0.022741 -0.902043 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_023_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="wing_support_R10_Cylinder.007_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.077984 -0.022236 -0.142288 -0.094341 -0.142208 0.037440 0.072089 1.527498 -0.022741 -0.157878 0.037136 -0.208408 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.007_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="engine04_Plane.006_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.129852 -0.071523 0.038510 0.142208 1.192925 -0.039483 -0.157308 0.022741 0.069040 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_alu-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Plane_006_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="rudder_wire_L_Mesh.018_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.022946 0.080808 -0.140589 0.031825 -0.056503 0.137076 0.069566 1.485385 0.151996 0.038757 0.047084 -0.912589 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Mesh_018_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wing_support_L02_Cylinder.006_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.159510 0.028022 0.024353 0.372352 -0.021820 0.157679 -0.038510 1.186785 -0.030035 0.034263 0.157308 -0.301335 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_006_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="aileron_L01_Cube.006_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.650764 -0.071523 0.038510 0.142208 1.175323 -0.039483 -0.157308 0.022741 -0.456807 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_006_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="light.01_light.003_0000_m000_0.000000">
+		<emitter type="area" name="emitter">
+			<float name="samplingWeight" value="1.000000"/>
+			<rgb value="82.525065 82.525065 82.525065" name="radiance"/>
+		</emitter>
+		<string name="filename" value="Scene/00481/light_003_0000_m000_0_000000.serialized"/>
+		<ref name="bsdf" id="light.001-mts_ntree-bsdf"/>
+		<transform name="toWorld">
+			<matrix value="-1.560000 -0.000000 0.000000 -0.026990 0.000000 -1.000000 0.000000 1.998730 0.000000 0.000000 0.585092 -0.881225 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+	</shape>
+	<shape type="instance" id="undercarriage_wire_L01_Mesh.006_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.142565 -0.046383 0.086226 0.015365 -0.072130 -0.018852 0.191896 1.467614 -0.036143 -0.158671 -0.048606 -0.937455 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Mesh.006_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="wheel_R02_Cylinder.034_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.077984 -0.024353 0.141941 -0.058677 -0.142208 0.038510 -0.071523 1.190384 -0.022741 -0.157308 -0.039483 -0.136150 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.034_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="undercarriage_tail_wire_R01_Mesh.006_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.141131 -0.057366 -0.082564 -0.000964 0.070799 -0.010968 -0.194564 1.475821 0.043610 -0.155810 0.044150 -0.932909 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Mesh.006_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="instance" id="fuselage_lock02_001_Plane.020_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.163039 -0.014564 -0.005278 0.175031 0.004703 0.006626 -0.163572 1.176733 0.014760 -0.162990 -0.006178 0.023272 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.020_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="engine01_Cube.023_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.161490 -0.071523 0.038510 0.142208 1.231074 -0.039483 -0.157308 0.022741 0.055248 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="internals_b-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cube_023_0000_m000_0_000000.serialized"/>
+	</shape>
+	<bsdf type="roughplastic" id="Tire2.016-bl_mat-bsdf">
+		<rgb value="0.500000 0.500000 0.500000" name="specularReflectance"/>
+		<rgb value="0.031373 0.031373 0.031373" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.559898"/>
+	</bsdf>
+	<shape type="serialized" id="wheel_r_Untitled.048_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.263630 0.000000 -0.000000 0.005829 0.200984 0.005007 -0.002986 -0.000000 0.522718 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Tire2.016-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_048_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wheel_r_Untitled.048_0000_m001_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.263630 0.000000 -0.000000 0.005829 0.200984 0.005007 -0.002986 -0.000000 0.522718 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #35.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_048_0000_m001_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wheel_r_Untitled.048_0000_m002_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.263630 0.000000 -0.000000 0.005829 0.200984 0.005007 -0.002986 -0.000000 0.522718 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #36.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_048_0000_m002_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wheel_r_Untitled.048_0000_m003_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.002986 0.005007 0.000000 -0.263630 0.000000 -0.000000 0.005829 0.200984 0.005007 -0.002986 -0.000000 0.522718 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="Material #37.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Untitled_048_0000_m003_0_000000.serialized"/>
+	</shape>
+	<shape type="serialized" id="wing_wire_L01_Mesh.009_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.141941 -0.024353 0.077984 0.129745 -0.071523 0.038510 0.142208 1.203827 -0.039483 -0.157308 0.022741 -0.262299 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Mesh_009_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="fuselage_lock02_Plane.020_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.158778 -0.014231 0.037534 0.169825 -0.038063 0.004741 -0.159218 1.178031 0.012749 -0.163085 -0.007904 -0.040642 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.020_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<bsdf type="roughplastic" id="leftWall.002-bl_mat-bsdf">
+		<rgb value="0.000000 0.000000 0.000000" name="specularReflectance"/>
+		<rgb value="0.504000 0.052000 0.040000" name="diffuseReflectance"/>
+		<string name="distribution" value="beckmann"/>
+		<float name="alpha" value="0.904837"/>
+	</bsdf>
+	<shape type="serialized" id="leftWall.002_leftWall.002_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 -0.000000 0.000000 0.000000 0.000000 1.115879 0.000000 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="leftWall.002-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/leftWall_002_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="nut01_003_Cylinder.010_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.021813 0.043847 0.156280 0.139206 0.156287 -0.048246 -0.008278 1.199311 0.043822 0.150238 -0.048269 -0.262043 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.010_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="wing_support_L09_Cylinder.009_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.020036 0.007773 0.162357 0.137827 0.159971 -0.029931 -0.018308 1.197798 0.028804 0.160827 -0.011254 -0.255037 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_009_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="wing_wire_R02_Cylinder.021_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.072074 -0.043737 -0.140407 -0.332765 0.147053 0.019779 0.069324 1.649991 -0.001556 -0.156581 0.047976 -0.200677 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.021_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="aileron_controll_L04_Cylinder.014_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.096338 0.130778 0.020923 0.619226 -0.016759 -0.037702 0.158491 1.149989 0.131376 0.091090 0.035561 -0.309562 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Cylinder_014_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="rudder_frame03_Cylinder.026_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="0.155638 0.041302 0.029879 0.019654 -0.050749 0.134608 0.078275 1.477903 -0.004818 -0.083645 0.140719 -0.901779 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Cylinder.026_0000_m000_0.000000_shapegroup"/>
+	</shape>
+	<shape type="serialized" id="aileron_controll_L02_Plane.005_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.096338 0.130778 0.020923 0.622927 -0.016759 -0.037702 0.158491 1.148922 0.131376 0.091090 0.035561 -0.306984 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="bsdf" id="base-bl_mat-bsdf"/>
+		<string name="filename" value="Scene/00481/Plane_005_0000_m000_0_000000.serialized"/>
+	</shape>
+	<shape type="instance" id="rudder07_Plane.012_0000_m000_0.000000">
+		<transform name="toWorld">
+			<matrix value="-0.106198 0.024353 0.122273 0.009752 0.116304 -0.038510 0.108683 1.478330 0.044913 0.157307 0.007677 -0.878699 0.000000 0.000000 0.000000 1.000000"/>
+		</transform>
+		<ref name="shapegroup" id="Plane.012_0000_m000_0.000000_shapegroup"/>
+	</shape>
+</scene>
