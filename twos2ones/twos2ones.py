@@ -26,4 +26,5 @@ for bsdf in twosided_bsdfs:
 	p.remove(bsdf)
 
 tree.write(output_xml, pretty_print=True)
+print("Onesided XML saved to " + output_xml)
 sys.exit()
