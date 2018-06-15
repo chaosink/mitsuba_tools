@@ -5,7 +5,7 @@ from lxml import etree as et
 import sys
 
 if len(sys.argv) < 3:
-	print("Usage: python3 twos2ones.py input_xml output_xml")
+	print("Usage: python3 rm_twosided.py input_xml output_xml")
 	sys.exit()
 
 input_xml = sys.argv[1]
@@ -26,5 +26,5 @@ for bsdf in twosided_bsdfs:
 	p.remove(bsdf)
 
 tree.write(output_xml, pretty_print=True)
-print("Onesided XML saved to " + output_xml)
+print("Twosided-removed XML saved to " + output_xml)
 sys.exit()
