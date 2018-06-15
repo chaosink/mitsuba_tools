@@ -4,8 +4,8 @@ Some useful tools for Mitsuba.
 
 ### rm_instance
 
-* Convert `instance` and `shapegroup` into common shapes.
-* Usually used for Blender exported Mitsuba scenes which may contain `instance` and `shapegroup`.
+* Convert `instance` and `shapegroup` shapes into non-instanced shapes.
+* Usually used for Blender exported Mitsuba scenes which may contain `instance` and `shapegroup` shapes.
 
 ### rm_twosided
 
