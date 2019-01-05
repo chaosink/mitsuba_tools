@@ -2,7 +2,7 @@
 
 import os
 import sys
-import time
+import shutil
 from timeit import default_timer as timer
 
 if len(sys.argv) != 4:
@@ -13,7 +13,7 @@ mitsuba_bin = sys.argv[1]
 scene_file = sys.argv[2]
 spps = sys.argv[3].split()
 
-if not os.path.exists(mitsuba_bin):
+if not os.path.exists(mitsuba_bin) and not shutil.which(mitsuba_bin):
 	print('Mitsuba binary file does not exist: ' + mitsuba_bin)
 	exit(1)
 
